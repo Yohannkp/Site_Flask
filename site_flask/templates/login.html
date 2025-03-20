@@ -58,12 +58,14 @@
             </div>
         </form>
 
-
-        <a href="{{ url_for('forgetpassword') }}">Mot de pass oublié</a>
+     
+        <a href="{{ url_for('forgetpassword') }}">Mot de pass oublié</a><br>
+        <p>Pas encore de compte ? <a href="{{ url_for('register') }}" style="text-decoration: underline;">Inscription</a></p>
+        
         {% if session['role'] == 'user' or session['role'] == 'admin' %}
         <!-- Bouton de retour -->
         <div class="mt-4 text-center">
-            <a href="{{ url_for('index') }}" class="text-blue-600 hover:underline">Retour à l'accueil</a>
+            <a href="{{ url_for('index') }}"  class="text-blue-600 hover:underline">Retour à l'accueil</a>
         </div>
         
         {% endif %}

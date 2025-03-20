@@ -106,7 +106,7 @@ def ticket_view(ticket_id):
 def load_user(user_id):
     return User.query.get(user_id)
 
-@app.route('/send_message', methods=['POST'])
+@app.route('/send_message',methods=["POST"])
 def send_message():
     ticket_id = request.form['ticket_id']
     content = request.form['content']
